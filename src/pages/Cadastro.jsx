@@ -23,10 +23,11 @@ const Cadastro = () => {
     return (
         <main>
             <section>
-                <div>Formulário de Cadastro</div>
-                <p>
-                    
-                </p>
+                <div>
+                    <p>
+                        Formulário de Cadastro
+                    </p>
+                </div>
             </section>
             <div>
                 <form onSubmit={handleSubmit}>
