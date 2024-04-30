@@ -59,7 +59,7 @@ const Cadastro = () => {
                         <input type='password' name='key' id='key' placeholder='*********'
                             onChange={(e) => setKey(e.target.value)} value={Ckey} />
                     </label><p> <br /> </p>
-                    <Link to ="/Menu"><button type='button'}>Enviar</button></Link>
+                    <Link to ="/Menu"><button type='button'>Enviar</button></Link>
                 </form>
 
             </div>
