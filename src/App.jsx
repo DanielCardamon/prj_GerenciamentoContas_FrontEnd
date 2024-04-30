@@ -50,7 +50,7 @@ function App() {
           <Route path='/pagina3' element={<Page3 />} />
           <Route path='/Form' element={<Form />} />
           <Route path='/Login' element={<Login />} />          
-          <Route path='/Cadastro' element={<Cadastro />} />
+          <Route path='/cadastro' element={<Cadastro />} />
           <Route path='/Menu' element={<Menu />} />
         </Routes>
         <Footer /> 
