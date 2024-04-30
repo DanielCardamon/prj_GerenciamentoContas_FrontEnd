@@ -25,7 +25,7 @@ como aparelhos, produtos gastos, etc
         <Link to ="/Login"><button type='button'>Logar</button></Link>
         </div>
         <div>
-        <Link to ="/Cadastro"><button type='button'onClick={"/Cadastro"}>Casdastrar</button></Link>
+        <Link to ="/cadastro"><button type='button'>Casdastrar</button></Link>
         </div>
       </div>
      
