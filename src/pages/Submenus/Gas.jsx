@@ -6,36 +6,41 @@ import aparelho from '../../assets/Aparelho.svg'
 import gas from '../../assets/GasW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
-
+import { useEffect } from 'react'
+import GasMap from './GasMap'
+import { useState } from 'react'
 import Logo from '../../components/Logo/Logo'
 const Gas = () => {
+  const [AparelhosGas, setAparelhosGas] = useState([])
+  useEffect(() => {
+
+    fetch("http://localhost:8090/enderecos/aparelhos/eletricos/listar", {//metodo get
+        method: "get",
+        headers: {
+            "Content-type": "application/json",
+            "Accept": "application/json"
+        }
+  
+    })
+  
+        .then((res) => res.json())
+        .then((data) => {
+          
+            setAparelhosGas(data)
+        })
+        .catch((err) => alert(err))
+  
+  }, [])
   return (
     <main>
       <section>
-      <Logo/>
-        <h1>Aparelhos de gás</h1>
+     
         <div>
-          <section >
-            <div className="item">
-              <ItemmenuE
-                img={gas}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/Aparelhogas"
-              /></div>
-            <div className="item">
-              <ItemmenuE
-                img={gas}
-                gastos='R$ 28493'
-                data='total'
-                link="/Aparelhogas"
-              /></div>
-                      
-              
-          </section>
-        </div>
+    <GasMap vetor={AparelhosGas} /> 
+ </div>
+        
 
-        <Link to="/Aparelhogas"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
+       
       </section>
     </main>
   )

@@ -56,7 +56,7 @@ const Login = () => {
 
                     <TextLink span="Novo usuario?" link="/Cadastro" texto="Crie uma conta"/>
                     <TextLink span="Esqueceu a senha?" link="/" texto="Trocar a senha"/>
-                    <Link to="/Menu"><button type='button' className='buttonsp log'>Entrar</button></Link>
+                    <Link to="/Menu"><button   type='button' className='buttonsp log'>Entrar</button></Link>
 
 
                 </form>

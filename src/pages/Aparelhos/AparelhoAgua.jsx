@@ -38,7 +38,7 @@ const AparelhoAgua = () => {
             <section>
                 <Logo />
                 <h1>Salvar Aparelho de água</h1>
-                <p>{JSON.stringify(AparelhosAgua)}</p>
+                
 
                 <form onSubmit={handleSubmit}>
 
@@ -66,8 +66,8 @@ const AparelhoAgua = () => {
               
 
                     <div className='justify-content: space-around;'>
-                        <Link to="/Agua"><button className='buttonsp' type='button'><img src={comfir} alt="img" /></button></Link>
-                        <Link to="/Agua"><button className='buttonsp' type='button'><img src={excluir} alt="img" /></button></Link>
+                        <Link to="/Agua"><button className='buttonsp ' type='button'><img src={comfir} alt="img" /></button></Link>
+                        <Link to="/Agua"><button  className='buttonsp ' type='button'><img src={excluir} alt="img" /></button></Link>
                     </div>
                 </form>
 
