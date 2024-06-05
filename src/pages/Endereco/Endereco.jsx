@@ -9,15 +9,18 @@ import outros from '../../assets/OutrosW.svg'
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
 import Logo from "../../components/Logo/Logo"
+import { useEffect } from 'react'
 
+import { useState } from 'react'
 const Endereco = () => {
+ 
   return (
     <main>
       <section>
         <div>
           <section >
             <Logo/>
-            <h1>Enderecos: {}</h1>
+            <h1>Endereco: {}</h1>
             <div className="item">
               <ItemmenuE
                 img={luz}
