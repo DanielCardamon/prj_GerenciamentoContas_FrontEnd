@@ -3,55 +3,63 @@
 //import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Page2 from './pages/Pagina2'
-import Page3 from './pages/Pagina3'
-import Form from './pages/Form'
-import Login from './pages/Login'
-import Cadastro from './pages/Cadastro'
-import Menu from './pages/Menu'
+import NavBar from './components/Navbar/NavBar'
+import Footer from './components/Footer/Footer'
+import Home from './pages/Home/Home'
+import Login from './pages/Login/Login'
+import Cadastro from './pages/Cadastro/Cadastro'
+import EditCadastro from './pages/EditCadastro/EditCadastro'
+import CadastroEndereco from './pages/CadastroEndereco/CadastroEndereco'
+import Menu from './pages/Menu/Menu'
+import Acessibilidade from './components/Acessibilidade/Acessibilidade'
+import Endereco from './pages/Endereco/Endereco'
+import Luz from './pages/Submenus/Luz'
+import Agua from './pages/Submenus/Agua'
+import Gas from './pages/Submenus/Gas'
+import Compras from './pages/Submenus/Compras'
+import Outros from './pages/Submenus/Outros'
+import AparelhoLuz from './pages/Aparelhos/AparelhoLuz'
+import AparelhoAgua from './pages/Aparelhos/AparelhoAgua'
+import Aparelhogas from './pages/Aparelhos/Aparelhogas'
+import ItemCompras from './pages/Aparelhos/ItemCompras'
+import ItemOutros from './pages/Aparelhos/ItemOutros'
+//import './Contraste.css'
+
 
 function App() {
 
   return (
     <>
-      {/* <div>
-        <ShowUserName name='Ciclano' />
-        {users.map((users) => (
-          <UserDetails
-            key={users.id}
-            nome={users.nome}
-            idade={users.idade}
-            profissao={users.profissao} />
-        ))}
-      </div> */}
-     {/*  <div>
-       
-        {cars.map((cars) => (
-          <CarDetails
-            key={cars.id}
-            marca={cars.marca}
-            km={cars.km}
-            cor={cars.cor} 
-            ano={cars.ano}/>
-        ))}
-      </div>
- */}
-      <BrowserRouter>
-{/*         <Header />
- */}        <NavBar /> 
  
+      <BrowserRouter>
+{         
+ }        <NavBar /> 
+ 
+
+ 
+
+ <Acessibilidade/>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/pagina2' element={<Page2 />} />
-          <Route path='/pagina3' element={<Page3 />} />
-          <Route path='/Form' element={<Form />} />
+          <Route path='/' element={<Home />} />          
+         
           <Route path='/Login' element={<Login />} />          
           <Route path='/cadastro' element={<Cadastro />} />
           <Route path='/Menu' element={<Menu />} />
+          <Route path='/Endereco' element={<Endereco />} />
+          <Route path='/EditCadastro' element={<EditCadastro />} />
+          <Route path='/CadastroEndereco' element={<CadastroEndereco />} />
+          
+          <Route path='/Luz' element={<Luz />} />
+          <Route path='/Agua' element={<Agua />} />
+          <Route path='/Gas' element={<Gas />} />
+          <Route path='/Compras' element={<Compras />} />
+          <Route path='/Outros' element={<Outros />} />
+
+          <Route path='/AparelhoLuz' element={<AparelhoLuz />} />
+          <Route path='/AparelhoAgua' element={<AparelhoAgua />} />
+          <Route path='/Aparelhogas' element={<Aparelhogas />} />
+          <Route path='/ItemCompras' element={<ItemCompras />} />
+          <Route path='/ItemOutros' element={<ItemOutros />} />
         </Routes>
         <Footer /> 
             
