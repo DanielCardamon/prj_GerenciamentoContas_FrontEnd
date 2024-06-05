@@ -21,9 +21,9 @@ const Home = () => {
           </div>
           <div>
             
-              <Link to="/Login"><button className='buttonsp' type='button'>Logar</button></Link>
+              <Link to="/Login"><button className='buttonsp ' type='button'>Logar</button></Link>
             
-              <Link to="/cadastro"><button className='buttonsp' type='button'>Casdastrar</button></Link>
+              <Link to="/cadastro"><button className='buttonsp ' type='button'>Casdastrar</button></Link>
            
           </div>
 

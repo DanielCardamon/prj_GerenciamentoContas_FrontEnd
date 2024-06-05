@@ -7,36 +7,54 @@ import Logo from '../../components/Logo/Logo'
 
 import novo from '../../assets/Add.svg'
 import {Link} from 'react-router-dom'
-
+import { useEffect } from 'react'
+import LuzMap from './LuzMap'
+import { useState } from 'react'
 
 const Luz = () => {
+  const [AparelhosLuz, setAparelhosLuz] = useState([])
+  const aparelhoLuz = {
+    "valorAparelho": 0,
+    "potencia": 0,
+    "tempoUsoEletrico": null,
+    "nomeAparelho":""
+
+}
+useEffect(() => {
+
+  fetch("http://localhost:8090/enderecos/aparelhos/eletricos/listar", {//metodo get
+      method: "get",
+      headers: {
+          "Content-type": "application/json",
+          "Accept": "application/json"
+      }
+
+  })
+
+      .then((res) => res.json())
+      .then((data) => {
+        
+          setAparelhosLuz(data)
+      })
+      .catch((err) => alert(err))
+
+}, [])
+  
   return (
     <main>
       <section>
-        <Logo/>
-        <h1>Aparelhos Eletricos</h1>
-        <div>
-          <section >
-            <div className="item">
-              <ItemmenuE
-                img={luz}
-                gastos='R$ 28493'
-                data='Total'
-                link="/AparelhoLuz"
-              /></div>
-              <div className="item">
-              <ItemmenuE
-                img={aparelho}
-                gastos='R$ 28493'
-                data='hoje'
-                link="/AparelhoLuz"
-              /></div>
+      
+       
            
+             
+           <div>
+    <LuzMap vetor={AparelhosLuz} /> 
+ </div>
             
-          </section>
-        </div>
+        
+        
 
-        <Link to="/AparelhoLuz"><div id="sNovo"><img src={novo} alt="novo" className='novo' /></div></Link>
+       
       </section>
     </main>
   )

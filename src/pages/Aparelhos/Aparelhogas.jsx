@@ -52,8 +52,8 @@ const Aparelhogas = () => {
 
 
                         <div className='justify-content: space-around;'>
-                            <Link to="/Gas"><button className='buttonsp' type='button'><img src={comfir} alt="img" /></button></Link>
-                            <Link to="/Gas"><button className='buttonsp' type='button'><img src={excluir} alt="img" /></button></Link>
+                            <Link to="/Gas"><button className='buttonsp ' type='button'><img src={comfir} alt="img" /></button></Link>
+                            <Link to="/Gas"><button className='buttonsp ' type='button'><img src={excluir} alt="img" /></button></Link>
                         </div>
                     </form>
                 </div>

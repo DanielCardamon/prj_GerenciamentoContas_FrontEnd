@@ -43,6 +43,7 @@ main {
   color: var(--pal1);
 }
 
+
 .buttonsp {
   font-family: 'Inter',Arial, Helvetica, sans-serif !important;
   font-style: normal !important;
@@ -72,4 +73,3 @@ main {
 img{
   overflow:hidden;
 }
-
