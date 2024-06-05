@@ -66,4 +66,10 @@ main {
 .card {
   padding: 2em;
 }
+.hide{
+  display: none;
+}
+img{
+  overflow:hidden;
+}
 
